@@ -36,12 +36,12 @@ Se ha tenido que modificar el archivo *oscilator.launch* para poder configurar e
 Los pasos a seguir son:
 
 1. Se ejecuta la función de ejecución del código:
-```shell 
-$ roslaunch arduino_ros_examples oscillator.launch
-```
+	```shell 
+	$ roslaunch arduino_ros_examples oscillator.launch
+	```
 2. Se selecciona la variable a ver en el plot como *wave*.
 3. Se envia el siguiente comando para modificar el periodo de la señal.
-```shell 
-$ rostopic pub /period std_msgs/UInt16 5
-```
+	```shell 
+	$ rostopic pub /period std_msgs/UInt16 5
+	```
 Donde 5 es el valor en ms del delay del sistema. Este número se puede substituir por cualquier numero, dependiendo de lo rápida o lenta que se quiera que sea la señal. Menor que 2 la señal comienza a hacer cosas raras, y se deja de ver como una señal senoidal.
